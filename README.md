@@ -2,20 +2,20 @@ Extra Help Documentations for Assignment 2
 ====
 Overview
 ---
-This is an extra documentations for Assignment 2, to answer some common questions for the assignment 2's code. Most of the questions came from students' emails to TAs, further updates might be updated here.
+This is an extra documentation for Assignment 2. Most of the questions came from students' e-mails to TAs, further updates might be implemented if necessary.
 
-Basic Level
+Basic Examples for Non-Technique people 
 ---
-Here I will use a very naive and useless case to show how the basic coding things work under this project, in order to keep the fairness for those people already figured out and started their works. The example case is:
+To keep fairness for those people already figured out and started their works, here I will use a very naive and useless example to show how the basic coding thing works under this project. The example case is:
 
-1. Record how many times user press keys during each session
+1. Recording how many times user press keys during each session
 2. After ending each session, reset pressed time and recording which session it is.
 
 ### How to add extra variables for my projects？
 
-In the life circle of this project, everything is object orientated and every usable variables will be better defined within class. You can still define global variables but this might make tons of unwanted issues, or makes the system more difficult to run. 
+In the life circle of this project, everything is object orientated, so it will be better to define variables within classes. You can still define global variables, but this might cause tons of unwanted issues, or even mess up the lifecycle of the whole system if you did something wrong.
 
-Since most of the events happened in the `Watch.js`, I would recommand you to define most of the variables you want to use in this class. The first thing to do is find the constructor and adding your variables like:
+Since most of the events happened in the `Watch.js`, I would recommend you to define most of the variables you want to use in this class. The first thing to do is find the constructor and adding your variables like:
 
 ```javascript
 constructor(props){
@@ -32,7 +32,7 @@ constructor(props){
 }
 ```
 
-Since everything is in an OOP structure, if you want to define or use a variables, YOU CAN'T ONLY CALL ITS NAME, instead you have to define where this thing came from. `this` here means the variables are defined in this class. And you have to use the `this` here once you are using the parameters also in this class
+Some of you may not know why you need a "this" here. That symbol is used to define the variables within the scope of the class, and in the Javascript class constructor, you do not need to use a `var` to claim a new variable. (But you still have to use `var` if you want to define a temporary local variable). The symbol `this` here means the variables are defined in this class(`watch.js`). And you have to use the `this` here once you are using the parameters also in this class
 
 ### How to update variables after press keys
 
@@ -49,7 +49,7 @@ onKeyCharReceived = (c) => {
 
 ```
 
-Here as mentioned above, the `keyPressedTimes` needs you to claim where this variables came from, so once you want to use this variable in the `watch.js`, you have to use `this.state.keyPressedTimes` to claim where this variables came from
+Here as mentioned above, the `keyPressedTimes` needs you to claim where this variables came from, so once you want to use this variable in the `watch.js`, you have to use `this.state.keyPressedTimes` to claim this variable is from the current class.
 
 ### How to reset variables after press save buttons
 ```javascript
@@ -73,7 +73,7 @@ saveData = () => {
 }
 ```
 
-I think this should make sense and even you don't know how to write code, just following what is going on here you can also make things work.
+I think this should be straightforward and even you don't know how to write code, just following what is going on here you can also make things work.
 
 Some of you may not know what JSON is, please check the reference [here](https://www.json.org/)
 
@@ -83,7 +83,7 @@ Common Questions
 
 Many of you finded the `<TextArea inputChar={this.state.inputChar}/>` line but can't figure out why after set inputChar into nothing, this area still have something to show up.
 
-The reason is that the actually thing is this line will pass the `inputchar` into `textarea.js`, and the actual displayed input phrase is defined in the `textarea.js`, **NOT MEANS RENDER `inputchar` here**, considering the following ways to solve this issue:
+What this line did is to pass the `inputchar` into `textarea.js`, rather than render the `inputchar` directly. The displayed input phrase is defined in the `textarea.js`. So consider following ways to solve this issue:
 
 1. Define a variable called `this.state.displayText`, figure out how to update this variable, and replace the `<TextArea \>` line with `<label>{this.state.displayText}<\label>`, and figure out how to typesetting the HTML
 
@@ -91,20 +91,20 @@ The reason is that the actually thing is this line will pass the `inputchar` int
 
 ## Swipe not working so well with my phone
 
-Considering replace all the swipe event behaviors into `delete`, there are two events you have to edit if you want to do so, one is defiend in `keyboard.normal.js` and another in `keyboard.wip.js`
+Consider replacing all the swipe event behaviors into `delete`, there are two events you have to edit if you want to do so, one is defined in `keyboard.normal.js` and another in `keyboard.wip.js`
 
 ## Text is too small in my watch
 
-Change the index.css and figure out how to apply this features in `watch.js`. Google and stackoverflow (sometimes W3School) are your best friends for those questions
+Change the index.css and figure out how to apply those features in `watch.js`. Google and stackoverflow (sometimes W3School) are your best friends for those general html questions
 
 ## This React project is too terrible and I want to write my own
 
 This is up to you, but no extra scores will be applied here for the A2 itself.
 
-However, if you really did a totally new version and be prode of your progress, feel free to deliver an email to us.
+However, if you really made a new version of the project and be prode of your progress, feel free to email us.
 
 ## Any other suggestions
 
-I will recommand you to clean up your data and do some basic calculations before you save data to files, as after coding and user study, you may believe you almost did everything. But you have to do the data analysis to get scores. If all the files are named as same file name and no extra informations you can use to derive what you need, that will be another nightmare time for you to clean up them.
+I will recommend you to clean up your data and do some necessary calculations before you save data to files, as after coding and user study, you may believe you almost did everything. But you have to do the data analysis to get scores. If all the files are named as the same file name and no extra information you can use to derive what you need, that will be another nightmare time for you to clean up them.
 
 
