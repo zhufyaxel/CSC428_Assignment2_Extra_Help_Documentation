@@ -97,6 +97,9 @@ Consider replacing all the swipe event behaviors into `delete`, there are two ev
 
 Change the index.css and figure out how to apply those features in `watch.js`. Google and stackoverflow (sometimes W3School) are your best friends for those general html questions
 
+## How I debug my project?
+Using `console.log` and open console within your browser when you are running your projects. References: [ref1](https://www.w3schools.com/jsref/met_console_log.asp), [ref2](https://www.google.com/search?q=how+to+open+console+in+chrome)
+
 ## This React project is too terrible and I want to write my own
 
 This is up to you, but no extra scores will be applied here for the A2 itself.
