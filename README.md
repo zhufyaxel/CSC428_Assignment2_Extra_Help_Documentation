@@ -4,7 +4,7 @@ Overview
 ---
 This is an extra documentation for Assignment 2. Most of the questions came from students' e-mails to TAs, further updates might be implemented if necessary.
 
-Basic Examples for Non-Technique people 
+Basic Examples for beginners 
 ---
 To keep fairness for those people already figured out and started their works, here I will use a very naive and useless example to show how the basic coding thing works under this project. The example case is:
 
