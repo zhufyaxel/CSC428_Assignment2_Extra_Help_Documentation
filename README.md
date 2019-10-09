@@ -105,7 +105,7 @@ Using `console.log` and open console within your browser when you are running yo
 
 ## So where to find some good phrase sets for testing
 
-I would recommand for the ![Phrase Sets for Evaluating Text Entry Techniques](https://www.yorku.ca/mack/chi03b.html) from Scott MacKenzie
+I would recommand for the [Phrase Sets for Evaluating Text Entry Techniques](https://www.yorku.ca/mack/chi03b.html) from Scott MacKenzie
 
 ## After I have a pharase, how can I import them into my project
 
