@@ -2,20 +2,23 @@ Extra Help Documentations for Assignment 2
 ====
 Overview
 ---
-This is an extra documentation for Assignment 2. Most of the questions came from students' e-mails to TAs, further updates might be implemented if necessary.
+This is an extra documentation for Assignment 2. Most of the questions came from students' e-mails to TAs over years, further updates might be implemented if necessary.
 
 Basic Examples for beginners 
 ---
-To keep fairness for those people already figured out and started their works, here I will use a very naive and useless example to show how the basic coding thing works under this project. The example case is:
+One of the major tasks is to determine what to record, adding necessary recording based on events and save them into files.
+Here I will use a very naive and useless example to show how the basic coding thing works under this project. 
+
+The example case is:
 
 1. Recording how many times user press keys during each session
 2. After ending each session, reset pressed time and recording which session it is.
 
 ### How to add extra variables for my projects？
 
-In the life circle of this project, everything is object orientated, so it will be better to define variables within classes. You can still define global variables, but this might cause tons of unwanted issues, or even mess up the lifecycle of the whole system if you did something wrong.
+It will be recommanded to define variables within classes instead of defining extra variables globally. Though you can still define global variables if preferred, but please understand that global variables within this project might cause tons of unwanted issues, like mess up the lifecycle of the whole system.
 
-Since most of the events happened in the `Watch.js`, I would recommend you to define most of the variables you want to use in this class. The first thing to do is find the constructor and adding your variables like:
+Since most of the events happened in the `Watch.js`, I would recommend you to define most of the variables you want to within this class. The first thing to do is find the constructor and adding your variables like:
 
 ```javascript
 constructor(props){
@@ -24,7 +27,7 @@ constructor(props){
     this.state = {
         inputPhrase: "",
         inputChar: "", // above are something already done
-        keyPressedTimes: 0 // new variable within the this.state
+        keyPressedTimes: 0 // new variable within the this.state, as we wantted for this example tasks
     };
 
     this.sessionIndex = 0;// Another new variable, but outside the state scope
@@ -73,7 +76,7 @@ saveData = () => {
 }
 ```
 
-I think this should be straightforward and even you don't know how to write code, just following what is going on here you can also make things work.
+I think the code above should be straightforward and even you don't know how to write javascript (frankly speaking I don't know either), just following what is going on here you can mostly make things work.
 
 Some of you may not know what JSON is, please check the reference [here](https://www.json.org/)
 
@@ -100,11 +103,19 @@ Change the index.css and figure out how to apply those features in `watch.js`. G
 ## How I debug my project?
 Using `console.log` and open console within your browser when you are running your projects. References: [ref1](https://www.w3schools.com/jsref/met_console_log.asp), [ref2](https://www.google.com/search?q=how+to+open+console+in+chrome)
 
+## So where to find some good phrase sets for testing
+
+I would recommand for the ![Phrase Sets for Evaluating Text Entry Techniques](https://www.yorku.ca/mack/chi03b.html) from Scott MacKenzie
+
+## After I have a pharase, how can I import them into my project
+
+One way is to figure out how to import a text file into a running react project. But personally I'll recommand you to directly copy-paste all your target phrases directly into an array defined in your .js files and load them, as import a text file sometimes will be very painful if you did something wrong.
+
+But once you find a job and dealing with frontend, please don't do those "merged front end", and the best strategy will be to discuss with your backend collegues about how.
+
 ## This React project is too terrible and I want to write my own
 
-This is up to you, but no extra scores will be applied here for the A2 itself.
-
-However, if you really made a new version of the project and be prode of your progress, feel free to email us.
+This is up to you, if you really made a new version of the project and be prode of your progress, feel free to email us.
 
 ## Any other suggestions?
 
