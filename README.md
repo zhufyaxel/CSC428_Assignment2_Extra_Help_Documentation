@@ -103,6 +103,9 @@ Change the index.css and figure out how to apply those features in `watch.js`. G
 ## How I debug my project?
 Using `console.log` and open console within your browser when you are running your projects. References: [ref1](https://www.w3schools.com/jsref/met_console_log.asp), [ref2](https://www.google.com/search?q=how+to+open+console+in+chrome)
 
+## After build, the warning seems...scaring?
+Ignore them, or you can try `npm audit fix` as suggested. But I don't think anything will be changed there
+
 ## So where to find some good phrase sets for testing
 
 I would recommand for the [Phrase Sets for Evaluating Text Entry Techniques](https://www.yorku.ca/mack/chi03b.html) from Scott MacKenzie
